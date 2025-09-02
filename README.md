@@ -57,7 +57,6 @@ Components (Circle, Square, Rectangle) accept props for color, width, and height
 
 The page is split into sections (60% top, 20% middle, 20% bottom), each styled with flexbox.
 
-# Screen Short
 ![App Preview](./src/assets/flexbox-ui-challenge.png)
 
 # Future ideas
