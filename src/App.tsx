@@ -9,12 +9,13 @@ function App() {
         display: "flex",
         flexWrap: "wrap",
         flexDirection: "row",
-        width: "100%",
+        minWidth:"700px",
         height: "100vh",
+        padding:"2%"
       }}
     >
       <div
-        style={{ display: "flex",gap:"10px", height: "60%", width: "100%" }}
+        style={{ display: "flex",gap:"2px", height: "60%", width: "100%" }}
       >
         <div style={{ height: "100%", width: "30%" }}>
           <Rectangle
@@ -42,7 +43,7 @@ function App() {
               height: "50%",
             }}
           >
-            <Circle color="red" width="50%" height="100%" />
+            <Circle color="red" width="50%" height="80%" />
             <Square color="red" width="30%" height="70%" />
             <Rectangle
               orientation="horizontal"

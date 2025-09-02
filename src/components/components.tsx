@@ -1,4 +1,25 @@
-export const Rectangle = ({ orientation, color ,height,width}) => {
+import type React from "react";
+
+type RecProp ={
+  orientation : string,
+  color:string,
+  height:string,
+  width:string
+}
+
+type CircleProp ={
+  color:string,
+  height:string,
+  width:string
+}
+
+type SquareProp ={
+  color:string,
+  height:string,
+  width:string
+}
+
+export const Rectangle :React.FC<RecProp> = ({ orientation, color ,height,width}) => {
   return (
     <>
       {orientation === "horizontal" ? (
@@ -24,7 +45,7 @@ export const Rectangle = ({ orientation, color ,height,width}) => {
   );
 };
 
-export const Square = ({ color ,width,height}) => {
+export const Square :React.FC<CircleProp> = ({ color ,width,height}) => {
   return (
     <div
       style={{
@@ -37,7 +58,7 @@ export const Square = ({ color ,width,height}) => {
   );
 };
 
-export const Circle = ({color,width,height}) => {
+export const Circle :React.FC<SquareProp> = ({color,width,height}) => {
   return (
     <div
       style={{

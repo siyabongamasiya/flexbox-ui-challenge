@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# 🎨 Flexbox UI Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **React + Flexbox layout challenge**, built to practice creating complex UI structures using only **flexbox** for alignment and positioning.
 
-Currently, two official plugins are available:
+It showcases:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📦 Custom reusable components (`Circle`, `Square`, `Rectangle`)
+- 🎯 Nested flex containers with different directions (`row` and `column`)
+- 🖼️ A responsive full-page layout using `100vh` height and proportional widths/heights
+- 🚀 A clean and modern structure styled with inline styles + CSS reset
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Project Structure
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+flexbox-ui-challenge/
+├── src/
+│ ├── components/
+│ │ └── components.tsx # Shape components (Circle, Square, Rectangle)
+│ ├── App.tsx # Main layout built with flexbox
+│ ├── App.css # Base styles and global reset
+│ └── index.tsx # Entry point
+└── README.md
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Technologies Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- ⚛️ React 18 (with Vite)
+- 🎨 CSS + inline styles
+- 📐 Flexbox (no CSS grid used — flexbox only!)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📥 Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/siyabongamasiya/flexbox-ui-challenge.git
+   cd flexbox-ui-challenge
+
+2. **Install dependencies**
+npm install
+
+3. **Start the development server**
+npm run dev
+
+4. **Open your browser and go to**
+http://localhost:5173
+
+# How It Works
+
+The layout is made entirely with flexbox (display: flex, flex-direction, flex-wrap, align-items, etc.).
+
+Components (Circle, Square, Rectangle) accept props for color, width, and height.
+
+The page is split into sections (60% top, 20% middle, 20% bottom), each styled with flexbox.
+
+# ScreemShort
+![App Preview](./src/assets/flexbox-ui-challenge.png)
+
+# Future ideas
+-Add more shape types (triangle, hexagon, etc.)
+
+-Make it responsive for smaller screens
+
+-Add animations (hover effects, transitions)
